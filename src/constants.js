@@ -1,0 +1,1 @@
+export const COURSE_NAME = '| Manipulación Segura de Productos Químicos';

@@ -1,0 +1,80 @@
+.image-boton {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.dark-display{
+  height: screen;
+  margin: 5px;
+}
+.display-mobile{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100vh;
+  }
+
+  .audio-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0; /* Espaciado opcional */
+  }
+  
+  
+  @keyframes slideLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5%);
+    }
+    75% {
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide {
+    animation: slideLeftRight 5s ease-in-out infinite;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+
+  .display-mobile{
+      height: auto;
+      padding-left: 14px;
+      padding-right: 14px;    
+  }
+  .dark-display{
+      padding: 0;
+      margin: 0;
+      height: auto;
+  }
+  .ligth-display{
+      height: auto;
+  }
+
+  .text-mobile{
+      display: flex;
+      text-align: justify;
+  }
+}
+
+/* Additional styles for better responsiveness */
+@media (max-width: 640px) {
+  .right-column {
+    height: auto;
+    min-height: 50vh;
+  }
+}

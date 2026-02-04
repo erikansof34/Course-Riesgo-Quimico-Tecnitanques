@@ -1,0 +1,227 @@
+.regulacion-container-rq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-section-rq {
+  background-color: #0a9ead;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-text-rq {
+  max-width: 64rem;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+
+.instruction-text-rq {
+  max-width: 48rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.audio-container-rq {
+  width: 100%;
+  max-width: 48rem;
+  padding: 0 1.5rem;
+}
+
+.timeline-container-rq {
+  position: relative;
+  max-width: 1070px;
+  padding: 2rem 10px;
+}
+
+.timeline-line-rq {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  height: 4px;
+  background-color: #003454;
+  transform: translateY(-50%);
+}
+
+.timeline-line-rq::before,
+.timeline-line-rq::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #003454;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-line-rq::before {
+  left: -6px;
+}
+
+.timeline-line-rq::after {
+  right: -6px;
+}
+
+.timeline-item-rq {
+  position: relative;
+  display: inline-block;
+  width: 16.66%;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.timeline-content-rq {
+  background-color: white;
+  border: 2px solid #003454;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  min-height: 50px;
+  min-width: 154px;
+}
+
+.timeline-item-rq:hover .timeline-content-rq,
+.timeline-item-rq.active .timeline-content-rq {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background-color: #003454;
+}
+
+.timeline-item-rq:hover .timeline-year-rq,
+.timeline-item-rq:hover .timeline-law-rq,
+.timeline-item-rq.active .timeline-year-rq,
+.timeline-item-rq.active .timeline-law-rq {
+  color: white;
+}
+
+.timeline-year-rq {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #003454;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-law-rq {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .timeline-container-rq {
+    padding: 1rem 0;
+  }
+
+  .timeline-item-rq {
+    width: 33.33%;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-line-rq {
+    display: none;
+  }
+
+  .timeline-line-rq::before,
+  .timeline-line-rq::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .regulacion-container-rq {
+    margin-bottom: 4rem;
+  }
+
+  .header-section-rq {
+    padding: 1rem 1rem;
+  }
+
+  .timeline-container-rq {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-top: 2rem; /* Agrega espacio superior para separarlo del audio */
+  }
+
+  .timeline-item-rq {
+    width: 100%;
+  }
+
+  .intro-text-rq,
+  .instruction-text-rq,
+  .audio-container-rq {
+    padding: 0 1rem;
+  }
+  .toolp-mobile{
+  
+    position: absolute;
+    bottom: 10%; /* Aumenta el valor para subir el tooltip */
+    left: 140%;
+}
+}
+
+  
+.tooltip-rq {
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  margin-top: 0.5rem; 
+  background-color: #003454;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  max-width: 500px; 
+  width: 290px; 
+  white-space: normal;
+  text-align: justify;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.timeline-item-rq {
+  width: 30%; /* Ahora hay 5 elementos en lugar de 6, así que 100% / 5 = 20% */
+}
+
+/* .tooltip-rq{
+  position: absolute;
+  bottom: 110%; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem;
+  background-color: #6e3cd2;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  max-width: 500px;
+  width: 290px;
+  white-space: normal;
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+} */
+
+
+
+
+.tooltip-input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.875rem;
+  text-align: center;
+  width: 100%;
+  outline: none;
+}

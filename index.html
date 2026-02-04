@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Para pantalla grande */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%; /* Asegura que todo ocupe la pantalla completa */
+      }
+
+      /* Para pantalla móvil (max-width de 640px o menos) */
+      @media (max-width: 640px) {
+        html, body {
+          overflow: auto; /* Permite el scroll en móviles */
+          height: auto;   /* Permite que el contenido crezca con el scroll */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" style="margin: 0; padding: 0;">
+      <!-- Aquí irá el contenido de tu página -->
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

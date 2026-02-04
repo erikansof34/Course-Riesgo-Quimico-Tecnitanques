@@ -1,0 +1,62 @@
+  .ancho-resposnive{
+        width: 92%;
+  }
+  .pad-ejex{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+  
+  }
+  
+  /* Additional styles for better responsiveness */
+  @media (max-width: 640px) {
+    .ancho-resposnive{
+        width: 100%;
+    }
+    .pad-ejex{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .tooltip-container {
+      color: #8f8f8f;
+      background-color: #1e293b; /* Fondo oscuro para resaltar el texto */
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: right; /* Justifica el texto */
+      width: 330px;
+    }
+  }
+  .tooltip-container {
+    color: #8f8f8f;
+    background-color: #1e293b; /* Fondo oscuro para resaltar el texto */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center; /* Justifica el texto */
+    width: 330px;
+  }
+
+  
+  .tooltip-container .close-tooltip {
+    color: #f8f8f8;
+    background-color: #f87171; /* Color para el botón de cerrar */
+    font-weight: bold;
+  }
+  
+  
+  .close-tooltip {
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    margin-top: -15px;
+    margin-right: -15px;
+  }
+  
+  .close-tooltip:hover {
+    background-color: #c53030; /* Un tono más oscuro de rojo */
+  }
+  

@@ -1,0 +1,169 @@
+.quiz-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quiz-header {
+    background-color: #0f172a;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  
+  .quiz-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .quiz-subtitle {
+    color: white;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    line-height: 1.6;
+    margin-top: 0.50rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quiz-subtitle span {
+    color: #6E3CD2;
+    font-weight: 600;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    /* padding: 2rem; */
+    max-width: 1400px;
+    margin: 0 auto;
+    /* margin-top: 1rem; */
+  }
+  
+  .quiz-card {
+    perspective: 1500px;
+    height: 400px;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  
+  .quiz-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-front {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-back {
+    background-color: #0f172a;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .card-image {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  
+  .card-image-1 {
+    background-image: url('../../../assets/img/artes-morelco/chemicalrisk1.png');
+  }
+  
+  .card-image-2 {
+    background-image: url('../../../assets/img/artes-morelco/chemicalrisk1.png');
+  }
+  
+  .card-image-3 {
+    background-image: url('../../../assets/img/artes-morelco/chemicalrisk1.png');
+  }
+  
+  .card-content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* padding-left: 1.5rem;
+    padding-right: 1.5rem; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+    text-align: justify;
+    font-size: 20px;
+  }
+  
+  .result-correct {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .result-incorrect {
+    color: #F44336;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .result-message {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 640px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      width: 80%;
+    }
+    
+    .quiz-card {
+      height: 350px;
+    }
+    
+    .quiz-header {
+      padding: 2rem 1rem;
+    }
+    
+    .quiz-title {
+      font-size: 1.5rem;
+    }
+  }

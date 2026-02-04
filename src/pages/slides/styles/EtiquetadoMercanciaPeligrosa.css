@@ -1,0 +1,10 @@
+.tooltip-button {
+    background-color: #8B0000; /* Rojo oscuro */
+    color: black;
+    transition: background-color 0.3s ease; /* Efecto de transición */
+  }
+  
+  .tooltip-button:hover {
+    background-color: #FF6347 !important; /* Rojo claro en hover */
+  }
+  

@@ -1,0 +1,22 @@
+.situacion-item {
+  background-color: #003454;
+  padding: 7px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Agregamos la transición de zoom */
+  margin-left: 2px; /* Ajusta según el espacio que quieras */
+  transform: scale(1); /* Establece el tamaño original */
+}
+
+.situacion-item:hover {
+  background: linear-gradient(to bottom, #0a9ead, #17e497); /* Degradado de arriba hacia abajo */
+  transform: scale(1.1); /* Aumenta el tamaño en el hover */
+}
+
+.situacion-text {
+  color: white;
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+.situacion-item:hover .situacion-text {
+  color: #FFF; /* Puedes cambiar el color si lo deseas */
+}

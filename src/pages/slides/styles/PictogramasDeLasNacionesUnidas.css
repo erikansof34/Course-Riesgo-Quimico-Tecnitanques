@@ -1,0 +1,84 @@
+.picCtAct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+    justify-items: center;
+    align-items: center;
+    margin-right: -90px;
+    margin: 0 auto;
+}
+.picCtAct .grid-item.cuadro {
+  width: 140px; /* Ajusta este valor para reducir el ancho del cuadro */
+  height: 170px; /* Ajusta este valor para reducir el alto del cuadro */
+  padding: 5px; /* Reduce el espacio interno para hacer el cuadro más compacto */
+}
+.picCtAct div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.picCtAct img {
+    width: 80px; /* Ajusta este valor para cambiar el tamaño de las imágenes */
+    height: auto;
+}
+
+.picCtAct p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.grid-containerPic {
+ 
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  /* min-height: 150px;
+  max-height: 300px; */
+}
+
+@media (max-width: 768px) {
+    .picCtAct {
+      grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas más pequeñas */
+    }
+
+    .picCtAct img {
+      width: 60px; /* Reduce aún más el tamaño de las imágenes en pantallas pequeñas */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .picCtAct {
+      grid-template-columns: repeat(5, 1fr); /* Cinco columnas en pantallas más grandes */
+    }
+}
+
+.picFlexCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido horizontalmente */
+}
+.pic-grid-item.pic-cuadro {
+    border: 2px solid #ccc; /* Borde del cuadro */
+    padding: 10px; /* Espacio interno alrededor de la imagen y el texto */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9; /* Color de fondo para hacer el cuadro más visible */
+  }
+  
+  .pic-interrogacion-container img {
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .pic-grid-container {
+    gap: 20px; /* Espacio entre los cuadros */
+  }
+  

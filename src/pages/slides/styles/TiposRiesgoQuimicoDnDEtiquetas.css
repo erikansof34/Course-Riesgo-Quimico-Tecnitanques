@@ -1,0 +1,249 @@
+.tipos-riesgo-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-column {
+  width: 40%;
+  background-color: #0f172a;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-column {
+  width: 60%;
+  background-color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 90%; */
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.images-container img {
+  width: 22%;
+  height: auto;
+  object-fit: contain;
+}
+
+.drop-areas-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.draggable-options-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.draggable-option {
+  background-color: #c0185d;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 22%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.draggable-option:hover {
+  background-color: #a01550;
+}
+
+.drop-area {
+  background-color: rgb(235, 235, 235);
+  border: 2px dashed rgb(53, 53, 53);
+  border-radius: 8px;
+  width: 22%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.drop-area-activado{
+  background-color: #C0185D !important;
+  color: white !important;
+}
+.drop-area.is-over {
+  /* background-color: #e0e0e0; */
+  /* background-color: red; */
+}
+
+.drop-area.all-correct {
+  background-color: #4CAF50 !important;
+  color: white !important;
+  border-color: #45a049 !important;
+}
+
+.drop-area.all-incorrect {
+  background-color: #F44336 !important;
+  color: white !important;
+  border-color: #d32f2f !important;
+}
+
+
+.drop-area.dragged-over {
+  background-color: #c0185d;
+}
+.drop-area-activado .drop-text {
+  color: white !important;
+}
+.drop-text {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8f8f8f;
+  /* mix-blend-mode: difference; */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 2rem; */
+}
+
+.action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e3cd2;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 140px;
+}
+
+.action-button:hover {
+  background-color: #5b32b0;
+}
+
+.error-message {
+  color: #ef4444;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.result-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* .result-text.correct {
+  color: #10b981;
+} */
+
+.result-text.incorrect {
+  color: #8f8f8f;
+}
+
+.recordemos-button {
+  display: flex;
+  align-items: center;
+  background-color: #6e3cd2;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recordemos-button:hover {
+  background-color: #5b32b0;
+}
+
+@media (max-width: 768px) {
+  .tipos-riesgo-container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .images-container.mobile,
+  .drop-areas-container.mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .images-container.mobile img,
+  .drop-areas-container.mobile .dropdown-mobile {
+    width: 100%;
+  }
+
+  .dropdown-mobile {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .select-dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid #0f172a;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+  }
+  .numbered-item {
+    position: relative;
+    padding-top: 1.5rem;
+  }
+
+  .item-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #c0185d;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .images-container.mobile .numbered-item,
+  .drop-areas-container.mobile .numbered-item {
+    width: 100%;
+  }
+}

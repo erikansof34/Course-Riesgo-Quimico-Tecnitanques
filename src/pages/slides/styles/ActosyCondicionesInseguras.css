@@ -1,0 +1,25 @@
+.table-wide {
+  width: 130%; /* o cualquier ancho que desees */
+}
+
+/* Estilo de la celda con efecto hover */
+.table-cell-hover {
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para el color de fondo y el texto */
+}
+
+/* Cambia el fondo y el color del texto cuando se hace hover */
+.table-cell-hover:hover {
+  background-color: #003454; /* Cambia este color al que desees */
+  color: #FAFAFA; /* Cambia el color del texto a blanco */
+}
+@media (max-width: 640px) {
+  .table-wide {
+    width: 90%; /* Ajusta el ancho para móviles */
+    font-size: 14px; /* Reduce el tamaño de fuente si es necesario */
+    
+  }
+
+  .table-cell-hover {
+    padding: 1px; /* Ajusta el relleno de las celdas */
+  }
+}

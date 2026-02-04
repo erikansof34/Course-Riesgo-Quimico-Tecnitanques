@@ -1,0 +1,90 @@
+.regulacion-container-rq {
+    text-align: center;
+  }
+  
+ 
+  .cuadros-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .cuadro-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cuadro {
+    width: 230px;
+    height: 290px;
+    background-color: #003454;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  
+
+  
+  .cuadro-imagen {
+    width: 80%; /* Ajusta el tamaño de la imagen dentro del cuadro */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .cuadro-texto {
+    font-size: 14px;
+  }
+  
+
+  
+/* Estilos específicos para pantallas pequeñas */
+/* Estilos generales */
+.flecha {
+    font-size: 90px; /* Tamaño grande de flecha */
+    color: #6E3CD2;
+    font-weight: bold;
+    margin: 0 10px; /* Margen reducido para menor espacio entre flecha y cuadro */
+    text-shadow: 1px 1px 2px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Efecto hover para las tarjetas */
+.cuadro:hover {
+  background-color: #0a9ead; /* Cambia este color al que desees */
+  transition: background-color 0.3s ease; /* Transición suave del color */
+  transform: scale(1.15);
+}
+
+/* Opción para aumentar el tamaño o cambiar el estilo al hacer hover */
+.cuadro:hover .cuadro-texto {
+  color: #ffffff; /* Cambia el color del texto si lo deseas */
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 640px) {
+    .cuadros-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadro-wrapper {
+        flex-direction: column;
+        align-items: center; /* Centra tanto el cuadro como la flecha */
+    }
+
+    .flecha {
+        transform: rotate(90deg); /* Gira la flecha hacia abajo */
+        margin: 5px 0; /* Margen reducido para acercar la flecha al cuadro */
+        margin-left: 30px;
+    }
+}
